@@ -1,9 +1,9 @@
 class ConcertTicket {
-  public artist: string;
-  public city: string;
-  public dateConcert: string;
-  public placeNo: number;
-  public clientName: string = "";
+  private artist: string;
+  private city: string;
+  private dateConcert: string;
+  private placeNo: number;
+  private clientName: string = "";
   constructor(artist: string, city: string, dateConcert: string, placeNo: number, clientName?: string) {
     this.artist = artist;
     this.city = city;
@@ -14,7 +14,7 @@ class ConcertTicket {
     }
   }
 
-  public htmlDetails(): string {
+  htmlDetails(): string {
     let htmlContent: string = `
     <p>Name of artiste: ${this.artist}</p>
     <p>City: ${this.city}</p>
@@ -28,7 +28,7 @@ class ConcertTicket {
 }
 
 let firstTicket: ConcertTicket = new ConcertTicket("Mozart", "Aix-en Provence", "08/04/2020", 25, "Alper");
-let secondTicket: ConcertTicket = new ConcertTicket("Mozart", "Aix-en Provence", "08/04/2020", 26, );
+let secondTicket: ConcertTicket = new ConcertTicket("Mozart", "Aix-en Provence", "08/04/2020", 26 );
 console.log(firstTicket.htmlDetails());
 console.log(secondTicket.htmlDetails());
 
